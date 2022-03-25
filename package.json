@@ -12,14 +12,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git@github.com:wolasss/meteor-sentry.git"
+        "url": "git@github.com:nodsec/meteor-sentry.git"
     },
-    "author": "Adam Wolski",
+    "author": "Rene Klauco",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/wolasss/meteor-sentry/issues"
+        "url": "https://github.com/nodsec/meteor-sentry/issues"
     },
-    "homepage": "https://github.com/wolasss/meteor-sentry#readme",
+    "homepage": "https://github.com/nodsec/meteor-sentry#readme",
     "devDependencies": {
         "@commitlint/cli": "^8.3.6",
         "@commitlint/config-conventional": "^8.3.6",
