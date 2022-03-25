@@ -14,7 +14,7 @@
         "type": "git",
         "url": "git@github.com:nodsec/meteor-sentry.git"
     },
-    "author": "Rene Klauco",
+    "author": "René Klaučo",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/nodsec/meteor-sentry/issues"
