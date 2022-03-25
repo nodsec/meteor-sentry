@@ -30,45 +30,5 @@
         "@semantic-release/release-notes-generator": "^9.0.3",
         "husky": "^4.3.8",
         "semantic-release": "^17.4.7"
-    },
-    "husky": {
-        "hooks": {
-            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-        }
-    },
-    "release": {
-        "branch": "master",
-        "ci": false,
-        "plugins": [
-            [
-                "@semantic-release/commit-analyzer",
-                {
-                    "preset": "angular",
-                    "releaseRules": [
-                        {
-                            "type": "docs",
-                            "release": "patch"
-                        },
-                        {
-                            "type": "chore",
-                            "release": "patch"
-                        },
-                        {
-                            "type": "refactor",
-                            "release": "patch"
-                        }
-                    ]
-                }
-            ],
-            "@semantic-release/release-notes-generator",
-            "@semantic-release/changelog",
-            [
-                "@semantic-release/npm",
-                {
-                    "npmPublish": false
-                }
-            ],
-            "@semantic-release/git"
-        ]
     }
 }
