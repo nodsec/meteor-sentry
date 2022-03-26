@@ -7,8 +7,9 @@ Package.describe({
 });
 
 Npm.depends({
-  '@sentry/browser': '6.18.1',
-  '@sentry/node': '6.18.1'
+  '@sentry/browser': '6.19.2',
+  '@sentry/react': '6.19.2',
+  '@sentry/node': '6.19.2'
 });
 
 Package.onUse(function(api) {
