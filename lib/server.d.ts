@@ -1,0 +1,10 @@
+declare module SentryLogger {
+    export function init():void;    
+    export function fatal(event:string|Error, extra:Record<string,any>):void;
+    export function error(event:string|Error, extra:Record<string,any>):void;
+    export function warning(event:string|Error, extra:Record<string,any>):void;
+    export function log(event:string|Error, extra:Record<string,any>):void;
+    export function info(event:string|Error, extra:Record<string,any>):void;
+    export function debug(event:string|Error, extra:Record<string,any>):void;
+    export function critical(event:string|Error, extra:Record<string,any>):void;
+}

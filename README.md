@@ -14,22 +14,40 @@ meteor add nodsec:sentry
 
 The same interface can be used on a client and server.
 
+## Configuration
+
+Sentry package is possible configure in Meteor.settings
+
+```
+{
+    "SENTRY": {
+        "public" : {
+            "enabled" : true,
+            "dsn" : "https://..............ingest.sentry.io/1234567",
+            "debug" : true,
+            "tracesSampleRate" : 1
+        },
+        "enabled" : true,
+        "dsn" : "https://..............ingest.sentry.io/1234568",
+        "debug" : true,
+        "tracesSampleRate" : 1
+    }
+}
+
+```
+
 ## Initialization (client/server)
 
 ```
-import Logger from 'meteor/nodsec:sentry';
+import SentryLogger from 'meteor/nodsec:sentry';
 
-Logger.init({
-    dsn: YOUR_SENTRY_DSN GOES HERE
-
-    //any other options you want to pass to sentry init function
-});
+Logger.init();
 ```
 
 ## Logging events (client/server)
 
 ```
-import Logger from 'meteor/nodsec:sentry';
+import SentryLogger from 'meteor/nodsec:sentry';
 
 Logger.info('Something happened', {
     userId: getUserId()
@@ -39,12 +57,12 @@ Logger.info('Something happened', {
 Logger has methods for all Sentry severity levels, such as:
 
 ```
-Logger.error()
-Logger.fatal()
-Logger.warning()
-Logger.info()
-Logger.debug()
-Logger.critical()
+SentryLogger.error()
+SentryLogger.fatal()
+SentryLogger.warning()
+SentryLogger.info()
+SentryLogger.debug()
+SentryLogger.critical()
 ```
 
 each method has following signature:
@@ -67,10 +85,9 @@ Any unhandled exceptions that happen on the client or server should be automatic
 If you wish to postprocess an event somehow - for instance log it to the console, you can pass a custom function in initialization.
 
 ```
-import Logger from 'meteor/nodsec:sentry';
+import SentryLogger from 'meteor/nodsec:sentry';
 
 Logger.init({
-    dsn: YOUR_SENTRY_DSN GOES HERE,
     postprocess: function(level, event, extra) {
         console.log(`[${level}] - ${event}`, extra);
     }
