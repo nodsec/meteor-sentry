@@ -1,6 +1,6 @@
 Package.describe({
   name: 'nodsec:sentry',
-  version: '1.1.2',
+  version: '1.1.3',
   summary: 'A simple wrapper for sentry SDK. Allows to use sentry in both client and server in meteor apps.',
   git: 'https://github.com/nodsec/meteor-sentry',
   documentation: 'README.md'
