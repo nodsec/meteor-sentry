@@ -11,6 +11,6 @@ meteor@1.10.0
 modern-browsers@0.1.7
 modules@0.18.0
 modules-runtime@0.12.0
-nodsec:sentry@1.0.9
+nodsec:sentry@1.1.0
 promise@0.12.0
 react-fast-refresh@0.2.3
